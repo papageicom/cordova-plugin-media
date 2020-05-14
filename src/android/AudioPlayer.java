@@ -153,10 +153,10 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
             this.audioFile = file;
             this.recorder = new MediaRecorder();
             this.recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            this.recorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_WB); // RAW_AMR);
-            this.recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_WB); //AMR_WB);
-            this.recorder.setAudioSamplingRate(16000);
-            this.recorder.setAudioEncodingBitRate(16000);
+            this.recorder.setOutputFormat(MediaRecorder.OutputFormat.OPUS); // RAW_AMR);
+            this.recorder.setAudioEncoder(MediaRecorder.AudioEncoder.OPUS); //AMR_WB);
+            this.recorder.setAudioSamplingRate(48000);
+            this.recorder.setAudioEncodingBitRate(48000);
             this.recorder.setAudioChannels(1);
             this.tempFile = generateTempFile();
             this.recorder.setOutputFile(this.tempFile);
